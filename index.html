@@ -2,6 +2,7 @@
 <html lang="fa">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MANSVOLVE SCOUT</title>
 <script src="./vendor/react.js"></script>
 <script src="./vendor/react-dom.js"></script>
@@ -103,6 +104,8 @@ html{scroll-behavior:smooth}
 .btn-sm{min-height:44px;padding:0 20px;font-size:14px}
 .nl{color:#bdbdbd;text-decoration:none;font-size:14px;padding:10px 14px;border-radius:999px;transition:background .2s,color .2s}
 .nl:hover{color:#000;background:#fff}
+.nl2{color:#fff;text-decoration:none;font-size:14px;padding:10px 14px;border-radius:999px;transition:background .2s,color .2s}
+.nl2:hover{color:#000;background:#fff}
 
 /* ---------- flow ---------- */
 .flowwrap{position:relative;padding:0 56px}
@@ -241,18 +244,18 @@ details[open].faq{border-color:#fff}
 .hdr .prog{display:none}
 .hdr .mono{font-size:10px!important;letter-spacing:.12em!important}
 .topbar{position:relative!important;top:0!important;padding-top:12px!important}
-section{padding:30px 16px!important}
-.panel{padding:30px 16px!important;border-radius:28px!important}
-h1{font-size:40px!important;margin-top:18px!important}
-h2{font-size:30px!important;margin-top:6px!important}
-.shim{font-size:52px!important}
-p{font-size:15px!important;line-height:1.85!important}
+section{padding:20px 16px!important}
+.panel{padding:20px 14px!important;border-radius:24px!important}
+h1{font-size:30px!important;line-height:1.2!important;margin-top:14px!important}
+h2{font-size:23px!important;line-height:1.3!important;margin-top:6px!important}
+.shim{font-size:38px!important}
+p{font-size:14px!important;line-height:1.75!important}
 [style*="margin-top: 36px"],[style*="margin-top: 38px"],[style*="margin-top: 40px"],[style*="margin-top: 44px"],[style*="margin-top: 48px"],[style*="margin-top: 52px"],[style*="margin-top: 56px"],[style*="margin-top: 64px"]{margin-top:20px!important}
 #top{gap:30px!important}
 .marq{padding:14px 0 20px!important}
-.trackL .fun{font-size:24px!important;gap:20px!important}
+.trackL .fun{font-size:20px!important;gap:16px!important}
 #scout .sr{padding:22px 20px!important;gap:12px!important;border-radius:28px!important}
-#scout .fun{font-size:46px!important}
+#scout .fun{font-size:34px!important}
 #moments [style*="grid-template-columns"]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
 .card{min-height:0!important;padding:14px 13px!important;gap:6px!important;border-radius:22px!important}
 .card h3{font-size:22px!important;margin:2px 0 0!important}
@@ -271,9 +274,9 @@ p{font-size:15px!important;line-height:1.85!important}
 [style*="padding: 11px 16px; border-radius: 18px"]{padding:8px 12px!important;font-size:14px!important}
 [style*="flex: 0 0 64px; display: flex"]{flex-basis:44px!important;min-height:44px!important}
 .pcard{min-height:0!important;padding:16px 18px!important;gap:4px!important;border-radius:22px!important}
-.pcard .mono[style*="font-size: 40px"]{font-size:28px!important}
+.pcard .mono[style*="font-size: 32px"]{font-size:24px!important}
 .pcard div[style*="font-size: 20px"]{font-size:17px!important;margin-top:4px!important}
-.count{font-size:44px!important}
+.count{font-size:36px!important}
 #points .fun{font-size:14px!important}
 #points [style*="border-radius: 30px"]{padding:18px!important;border-radius:22px!important}
 #about{gap:24px!important}
@@ -284,6 +287,37 @@ p{font-size:15px!important;line-height:1.85!important}
 summary{padding:14px 16px!important;font-size:15.5px!important}
 .faq p{padding:0 16px 16px!important}
 [style*="width: 96px; height: 96px"]{width:64px!important;height:64px!important}
+
+/* ===== extra-compact mobile pass ===== */
+[style*="gap: 28px"]{gap:14px!important}
+[style*="gap: 48px"],[style*="gap: 56px"]{gap:22px!important}
+[style*="padding: 0 16px 120px"],[style*="padding: 0 24px 120px"]{padding-bottom:20px!important}
+
+/* ---- چه لحظه‌ای ارزش شکار داره؟ : 2-col, icon + title on one row ---- */
+#moments [style*="grid-template-columns"]{gap:8px!important;margin-top:14px!important}
+#moments .card{display:grid!important;grid-template-columns:34px minmax(0,1fr)!important;align-items:center!important;column-gap:9px!important;row-gap:6px!important;padding:11px 12px 12px!important;border-radius:18px!important}
+#moments .card>div:first-child{display:contents}
+#moments .card .ico{width:34px;height:34px;border-radius:11px;grid-column:1;grid-row:1}
+#moments .card .ico svg{width:17px;height:17px}
+#moments .card .ico span[style*="font-size"]{font-size:17px!important}
+#moments .card .curs{height:13px!important}
+#moments .card h3{grid-column:2;grid-row:1;font-size:17px!important;line-height:1.25!important;margin:0!important}
+#moments .card p{grid-column:1/-1;grid-row:2;font-size:12px!important;line-height:1.65!important;margin:0!important}
+
+/* ---- روند مسابقه : slim stacked steps, icon on the side ---- */
+#flow .panel{padding:18px 12px!important}
+#flow [style*="gap: 8px; flex-wrap: wrap"] span{font-size:11px!important;padding:4px 10px!important}
+#flow .mono[style*="letter-spacing: 0.18em"]{font-size:10px!important;padding:5px 11px!important}
+.flowwrap{margin-top:14px!important}
+.node{display:grid!important;grid-template-columns:34px minmax(0,1fr)!important;column-gap:11px!important;row-gap:2px!important;align-items:start!important;padding:12px 13px!important;border-radius:18px!important}
+.node>div:first-child{display:contents}
+.node>div:first-child>.mono{display:none}
+.node>div:first-child>span:first-child{width:34px!important;height:34px!important;border-radius:11px!important;grid-column:1;grid-row:1/span 3}
+.node>div:first-child>span:first-child svg{width:17px;height:17px}
+.node h3{grid-column:2;grid-row:1;font-size:16.5px!important;line-height:1.4!important;margin:0!important}
+.node p{grid-column:2;grid-row:2;font-size:12.5px!important;line-height:1.7!important;margin:0!important}
+.node>span:last-child{grid-column:2;grid-row:3;justify-self:start;margin-top:4px;font-size:10.5px!important;padding:2px 9px!important;gap:5px!important}
+.hconn,.frow2 .hconn,.mconn{height:12px!important;flex-basis:12px!important}
 }
 
 /* ---------- mobile navbar ---------- */
@@ -320,29 +354,28 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 
 <!-- ═════════ HEADER (floating pill) ═════════ -->
 <div class="topbar" style="position: sticky; top: 14px; z-index: 50; padding: 0 16px">
-<header class="r hdr" style="max-width: 1180px; margin: 0 auto; padding: 8px 8px 8px 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-radius: 999px; background-color: rgba(14,14,14,0.72); border: 1px solid #262626; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); position: relative; overflow: hidden">
+<header class="r hdr" style="max-width: 1180px; margin: 0 auto; padding: 8px 8px 8px 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-radius: 999px; background-color: rgba(14,14,14,0.72); border: 2px solid #262626; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); position: relative; overflow: hidden">
 <a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; padding-right: 4px" aria-label="MANSVOLVE SCOUT — بالای صفحه">
-<img src="./assets/6f9609739317748208ca74968ff6af97.png" alt="لوگوی MANSVOLVE" style="width: 42px; height: 42px; object-fit: cover; border-radius: 50%; border: 1px solid #333">
-<span class="mono" style="font-size: 11px; letter-spacing: 0.18em" dir="ltr">MANSVOLVE<span style="color: #7d7d7d"> / SCOUT</span></span>
+<img src="./assets/transparent.png" alt="لوگوی MANSVOLVE" style="width: 42px; height: 42px; object-fit: cover; border-radius: 50%; ">
+<span class="mono" style="font-size: 11px; letter-spacing: 0.18em" dir="ltr">MANSVOLVE<span style="color: #7d7d7d"></span></span>
 </a>
 <nav class="topnav" style="display: flex; gap: 4px; align-items: center; flex-wrap: wrap" aria-label="منوی اصلی">
+<a class="nl2" style="font-size: large; font-weight: bold;" href="#board" >لیدربورد</a>
 <a class="nl" href="#scout">اسکات کیه؟</a>
-<a class="nl" href="#flow">روند مسابقه</a>
+<a class="nl" href="#flow">روند</a>
 <a class="nl" href="#about">ما کی هستیم</a>
 <a class="nl" href="#points">امتیازها</a>
-<a class="nl" href="#board">جدول</a>
 <a class="btn btn-sm" href="https://t.me/MansvolveSupport" target="_blank" rel="noopener">ارسال لحظه</a>
 </nav>
 <div class="mbar">
 <a class="mcta" href="https://t.me/MansvolveSupport" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg>ارسال</a>
 <button type="button" class="{{hambCls}}" aria-label="منو" aria-expanded="{{menuExpanded}}" aria-controls="mobile-menu" onClick="{{toggleMenu}}"><span class="l1"></span><span class="l2"></span></button>
 </div>
-<div class="prog" aria-hidden="true" style="position: absolute; right: 0; left: 0; bottom: 0; height: 2px; background-color: #fff"></div>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
 <nav id="mobile-menu" class="mpanel" aria-label="منوی موبایل">
 <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 14px 10px; border-bottom: 1px solid #1f1f1f; margin-bottom: 6px">
 <span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.2em; color: #8a8a8a">MENU</span>
-<span style="font-size: 12px; color: #8a8a8a; display: inline-flex; align-items: center; gap: 8px"><span class="rec"></span>شکار لحظه · فصل ۱</span>
+<span style="font-size: 12px; color: #8a8a8a; display: inline-flex; align-items: center; gap: 8px"><span class="rec"></span>شکار لحظه ·</span>
 </div>
 <a class="mrow" href="#scout" onClick="{{closeMenu}}" style="animation-delay: 0.05s"><span class="mi">01</span>اسکات کیه؟<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
 <a class="mrow" href="#flow" onClick="{{closeMenu}}" style="animation-delay: 0.10s"><span class="mi">02</span>روند مسابقه<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
@@ -360,25 +393,24 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 </div>
 
 <!-- ═════════ HERO ═════════ -->
-<section id="top" style="position: relative; max-width: 1240px; margin: 0 auto; padding: 72px 24px 110px; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+<section id="top" style="position: relative; max-width: 1240px; margin: 0 auto; padding: 72px 24px 120px; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
 <div style="flex: 1 1 520px; min-width: 0">
-<div class="r d1 mono" style="display: inline-flex; align-items: center; gap: 12px; font-size: 12px; border: 1px solid #333; padding: 9px 18px 9px 16px; border-radius: 999px; color: #e0e0e0; background-color: rgba(255,255,255,0.03)"><span style="position: relative; width: 9px; height: 9px"><span class="ping" style="position: absolute; inset: 0; border-radius: 50%; background-color: #fff"></span><span style="position: absolute; inset: 0; border-radius: 50%; background-color: #fff"></span></span><span>کمپین «شکار لحظه» · فصل ۱ شروع شد</span></div>
-<h1 style="font-weight: 900; font-size: clamp(50px, 6.8vw, 102px); line-height: 1.08; margin: 28px 0 0">
+<div class="r d1 mono" style="display: inline-flex; align-items: center; gap: 12px; font-size: 12px; border: 1px solid #333; padding: 9px 18px 9px 16px; border-radius: 999px; color: #e0e0e0; background-color: rgba(255,255,255,0.03)"><span style="position: relative; width: 9px; height: 9px"><span class="ping" style="position: absolute; inset: 0; border-radius: 50%; background-color: #fff"></span><span style="position: absolute; inset: 0; border-radius: 50%; background-color: #fff"></span></span><span> « شکار لحظه ها شروع شد »</span></div>
+<h1 style="font-weight: 900; font-size: clamp(36px, 5vw, 72px); line-height: 1.08; margin: 28px 0 0">
 <span class="ln"><span class="lni" style="animation-delay: 0.15s">تو لحظه رو</span></span>
 <span class="ln"><span class="lni" style="animation-delay: 0.3s">پیدا کن.</span></span>
-<span class="ln"><span class="lni" style="animation-delay: 0.45s; color: #8a8a8a">ما ازش <span class="wiggle" style="background-color: #fff; color: #000; padding: 0 0.22em; border-radius: 0.4em">ریلز</span> می‌سازیم.</span></span>
+<span class="ln"><span class="lni" style="animation-delay: 0.45s; color: #8a8a8a">ما ازش <span class="wiggle" style="background-color: #fff; color: #000; padding: 0 0.22em; border-radius: 0.3em">ریلز</span> می‌سازیم.</span></span>
 </h1>
-<p class="r d5" style="font-size: 18px; line-height: 2; color: #a9a9a9; max-width: 560px; margin: 26px 0 0; font-weight: 300">وسط کلاس‌های آنلاین کنکور کلی لحظه‌ی خنده‌دار، انگیزشی و ماندگار هست که هیچ‌وقت دیده نمی‌شن. اسم استاد، جلسه و دقیقه‌ی دقیقش رو بفرست — ما پیداش می‌کنیم، تدوینش می‌کنیم و می‌ذاریمش تو ریلز MANSVOLVE. <span style="color: #fff; font-weight: 800">با اسم خودت — و سه نفر اول جدول جایزه‌ی نقدی می‌برن.</span></p>
+<p class="r d5" style="font-size: 18px; line-height: 2; color: #a9a9a9; max-width: 560px; margin: 26px 0 0; font-weight: 300">وسط کلاس‌های آنلاین کنکور لحظه‌هایی هست که هیچ‌وقت دیده نمی‌شن. <br>اسم استاد، جلسه و دقیقه‌ی دقیقش رو .بفرست ، ما ادیت و منتشرش میکنیم. <br> <span style="color: #fff; font-weight: 800">با اسم خودت |  سه نفر اول جدول جایزه‌ی نقدی می‌برن.</span></p>
 <div class="r d6" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px">
 <a class="btn" href="https://t.me/MansvolveSupport" target="_blank" rel="noopener">اولین لحظه‌ت رو بفرست<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></a>
-<a class="btn btn-ghost" href="https://www.instagram.com/mansvolve/reels/" target="_blank" rel="noopener">ریلزهای MANSVOLVE</a>
+<a class="btn btn-ghost " href="#board" rel="noopener">مشاهده لیدربورد</a>
 </div>
 <div class="r d7" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 40px; align-items: center">
 <span style="font-size: 13px; color: #7a7a7a; margin-left: 6px">تو تلگرام فقط این‌ها رو بفرست:</span>
 <span style="font-size: 13px; border: 1px dashed #4a4a4a; padding: 6px 14px; border-radius: 999px; color: #e6e6e6">اسم استاد</span>
 <span style="font-size: 13px; border: 1px dashed #4a4a4a; padding: 6px 14px; border-radius: 999px; color: #e6e6e6">شماره جلسه</span>
 <span class="mono" style="font-size: 12px; border: 1px dashed #4a4a4a; padding: 6px 14px; border-radius: 999px; color: #e6e6e6" dir="ltr">mm:ss</span>
-<span style="font-size: 13px; background-color: #fff; color: #000; padding: 6px 14px; border-radius: 999px; font-weight: 800">+ ویدیو = امتیاز ۳ برابر</span>
 </div>
 </div>
 
@@ -386,11 +418,11 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <div class="r d4" style="flex: 1 1 460px; min-width: 0; position: relative; padding: 28px 10px">
 <div style="border: 1px solid #2a2a2a; background-color: #0a0a0a; padding: 14px; border-radius: 32px; box-shadow: 0 40px 80px rgba(255,255,255,0.05)">
 <div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 8px 12px; gap: 12px">
-<span style="font-size: 12px; color: #cfcfcf; display: inline-flex; align-items: center; gap: 8px"><span style="width: 26px; height: 26px; border-radius: 50%; background-color: #fff; color: #000; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 12px">ز</span>کلاس زیست · جلسه ۱۴</span>
+<span style="font-size: 12px; color: #cfcfcf; display: inline-flex; align-items: center; gap: 8px"><span style="width: 26px; height: 26px; border-radius: 50%; background-color: #fff; color: #000; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 12px">ش</span>کلاس شیمی · جلسه ۱۴</span>
 <span class="mono" dir="ltr" style="font-size: 10px; color: #000; background-color: #fff; letter-spacing: 0.14em; display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 999px"><span class="rec" style="background-color: #000"></span>LIVE</span>
 </div>
 <div dir="ltr" class="dotsw" style="position: relative; aspect-ratio: 16 / 9; background-color: #121212; overflow: hidden; border-radius: 22px">
-<div class="mono" style="position: absolute; top: 18%; left: 9%; right: 9%; font-size: clamp(16px, 1.8vw, 24px); color: #3c3c3c; line-height: 1.7">ΔG = ΔH − TΔS<br>ATP → ADP + Pi</div>
+<div class="mono" style="position: absolute; top: 18%; left: 9%; right: 9%; font-size: clamp(16px, 1.8vw, 24px); color: #3c3c3c; line-height: 1.7">4s2 + 3d10 + 4p6​</div>
 <div class="focus" style="position: absolute; top: 50%; left: 50%; width: 44%; height: 50%; margin: -13% 0 0 -22%; border: 2px solid #fff; border-radius: 22px"></div>
 <div class="flash" style="position: absolute; inset: 0; background-color: #fff"></div>
 <div style="position: absolute; left: 0; right: 0; bottom: 24px; text-align: center">
@@ -409,75 +441,50 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <div class="playhead" style="position: absolute; top: 16px; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background-color: #fff; border: 4px solid #0a0a0a; box-shadow: 0 0 0 2px #fff"></div>
 </div>
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 0 10px 4px">
-<span style="font-size: 12px; color: #8c8c8c">تایم‌استمپ پیدا شد ← می‌ره برای تیم تدوین</span>
+<span style="font-size: 12px; color: #8c8c8c">لحظه پیدا شد ← می‌ره برای تیم تدوین</span>
 <span class="mono" dir="ltr" style="font-size: 10px; color: #6c6c6c">01:10:00</span>
 </div>
 </div>
 
 <!-- floating stickers -->
 <div class="r d6" style="position: absolute; top: -6px; left: -6px">
-<div class="bob fun" style="--rot: -8deg; background-color: #fff; color: #000; font-size: 22px; padding: 8px 20px 4px; border-radius: 999px; box-shadow: 0 10px 30px rgba(0,0,0,0.5)">جایزه‌ی نقدی</div>
 </div>
 <div class="r d7" style="position: absolute; bottom: -4px; right: 18px">
-<div class="bob2 fun" style="--rot: 5deg; background-color: #000; color: #fff; border: 1.5px solid #fff; font-size: 20px; padding: 8px 20px 4px; border-radius: 999px; display: flex; align-items: center; gap: 8px">ریلز شد <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"></path></svg></div>
 </div>
 <!-- rotating badge -->
-<div class="r d8" style="position: absolute; bottom: -46px; left: 6px; width: 124px; height: 124px" aria-hidden="true">
+<div class="r d8" style="position: absolute; bottom: -26px; left: 6px; width: 104px; height: 104px" aria-hidden="true">
 <div style="position: absolute; inset: 0; border-radius: 50%; background-color: #fff"></div>
-<div class="spin mono" dir="ltr" style="position: absolute; inset: 0; color: #000; font-size: 11px; font-weight: 600">
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(0deg)">S</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(15deg)">C</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(30deg)">O</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(45deg)">U</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(60deg)">T</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(80deg)">•</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(100deg)">T</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(115deg)">H</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(130deg)">E</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(150deg)">•</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(170deg)">M</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(186deg)">O</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(202deg)">M</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(218deg)">E</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(233deg)">N</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(248deg)">T</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(268deg)">•</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(288deg)">S</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(303deg)">0</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(318deg)">1</span>
-<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 56px; text-align: center; transform-origin: 6px 56px; transform: rotate(338deg)">•</span>
+<div class="spin mono" dir="ltr" style="position: absolute; inset: 0; color: #000; font-size: 9px; font-weight: 600">
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(0deg)">S</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(15deg)">C</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(30deg)">O</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(45deg)">U</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(60deg)">T</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(80deg)">•</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(100deg)">T</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(115deg)">H</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(130deg)">E</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(150deg)">•</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(170deg)">M</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(186deg)">O</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(202deg)">M</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(218deg)">E</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(233deg)">N</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(248deg)">T</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(268deg)">•</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(288deg)">S</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(303deg)">0</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(318deg)">1</span>
+<span style="position: absolute; left: 50%; top: 6px; width: 12px; margin-left: -6px; height: 46px; text-align: center; transform-origin: 6px 46px; transform: rotate(338deg)">•</span>
 </div>
-<img src="./assets/6f9609739317748208ca74968ff6af97.png" alt="" style="position: absolute; top: 31px; left: 31px; width: 62px; height: 62px; border-radius: 50%; object-fit: cover">
+<img src="./assets/6f9609739317748208ca74968ff6af97.png" alt="" style="position: absolute; top: 26px; left: 26px; width: 53px; height: 53px; border-radius: 50%; object-fit: cover">
 </div>
 </div>
 </section>
 
-<!-- ═════════ DOUBLE MARQUEE ═════════ -->
-<div class="marq" aria-hidden="true" style="position: relative; padding: 40px 0 50px; overflow: hidden">
-<div style="transform: rotate(-2.5deg); background-color: #fff; color: #000; padding: 14px 0; margin: 0 -40px">
-<div dir="ltr" class="trackL" style="display: flex; width: max-content">
-<div class="fun" style="display: flex; align-items: center; gap: 30px; padding-right: 30px; font-size: 38px; white-space: nowrap">
-<span>خنده‌دار</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span><span>انگیزشی</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span><span>احساسی</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span><span>غافلگیرکننده</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span><span>جمله‌ی طلایی</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span><span>ترفند تستی</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span>
-</div>
-<div class="fun" style="display: flex; align-items: center; gap: 30px; padding-right: 30px; font-size: 38px; white-space: nowrap">
-<span>خنده‌دار</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span><span>انگیزشی</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span><span>احساسی</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span><span>غافلگیرکننده</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span><span>جمله‌ی طلایی</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span><span>ترفند تستی</span><span style="width: 14px; height: 14px; border-radius: 50%; background-color: #000"></span>
-</div>
-</div>
-</div>
-<div style="transform: rotate(1.8deg); background-color: #0c0c0c; color: #fff; border-top: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a; padding: 12px 0; margin: 10px -40px 0">
-<div dir="ltr" class="trackR mono" style="display: flex; width: max-content">
-<div style="display: flex; align-items: center; gap: 28px; padding-right: 28px; font-size: 15px; letter-spacing: 0.2em; white-space: nowrap">
-<span>SCOUT THE MOMENT</span><span>✦</span><span>00:43:17</span><span>✦</span><span>SEND THE TIMESTAMP</span><span>✦</span><span>WE EDIT · YOU SHINE</span><span>✦</span><span>+100 XP</span><span>✦</span><span>CASH PRIZE</span><span>✦</span>
-</div>
-<div style="display: flex; align-items: center; gap: 28px; padding-right: 28px; font-size: 15px; letter-spacing: 0.2em; white-space: nowrap">
-<span>SCOUT THE MOMENT</span><span>✦</span><span>00:43:17</span><span>✦</span><span>SEND THE TIMESTAMP</span><span>✦</span><span>WE EDIT · YOU SHINE</span><span>✦</span><span>+100 XP</span><span>✦</span><span>CASH PRIZE</span><span>✦</span>
-</div>
-</div>
-</div>
-</div>
 
 <!-- ═════════ WHAT IS A SCOUT ═════════ -->
-<section id="scout" style="max-width: 1240px; margin: 0 auto; padding: 90px 24px 10px">
+<section id="scout" style="max-width: 1240px; margin: 0 auto; padding: 70px 24px 40px">
 <div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #7a7a7a" dir="ltr">01 — WHAT IS A SCOUT</div>
 <div class="sr" style="margin-top: 18px; background-color: #fff; color: #000; border-radius: 40px; padding: 36px 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 28px 44px">
 <div style="flex: 0 0 auto">
@@ -485,26 +492,25 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <div class="mono" dir="ltr" style="font-size: 13px; color: #555; margin-top: 8px; text-align: right">/skaʊt/ · Scout</div>
 </div>
 <div style="flex: 1 1 380px; min-width: 0">
-<p style="margin: 0; font-size: clamp(19px, 1.8vw, 24px); line-height: 1.9; font-weight: 800">دانش‌آموزیه که وسط کلاس‌ها لحظه‌های خاص رو پیدا می‌کنه و به ما خبر می‌ده تا ازش ریلز بسازیم.</p>
-<p style="margin: 10px 0 0; font-size: 15px; color: #555; line-height: 1.9">مثل استعدادیاب‌های فوتبال؛ اونا بازیکن پیدا می‌کنن، تو لحظه.</p>
+<p style="margin: 0; font-size: clamp(19px, 1.8vw, 24px); line-height: 1.9; font-weight: 800">دانش‌آموزیه که وسط کلاس‌ها لحظه‌های خاص رو پیدا می‌کنه و به ما اطلاع میده تا ازش ریلز بسازیم.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px">
-<span style="font-size: 14px; border: 1.5px solid #000; padding: 5px 14px; border-radius: 999px"><span style="font-weight: 800">کی؟</span> هر کنکوری</span>
-<span style="font-size: 14px; border: 1.5px solid #000; padding: 5px 14px; border-radius: 999px"><span style="font-weight: 800">کارش؟</span> فقط پیدا کردن</span>
-<span style="font-size: 14px; background-color: #000; color: #fff; padding: 5px 14px; border-radius: 999px"><span style="font-weight: 800">جایزه؟</span> نقدی + اسم پای ریلز</span>
+<span style="font-size: 14px; border: 1.5px solid #000; padding: 5px 14px; border-radius: 999px"><span style="font-weight: 800">کی؟</span> هر دانش آموز</span>
+<span style="font-size: 14px; border: 1.5px solid #000; padding: 5px 14px; border-radius: 999px"><span style="font-weight: 800">کارش؟</span> پیدا کردن لحظه ها</span>
+<span style="font-size: 14px; background-color: #000; color: #fff; padding: 5px 14px; border-radius: 999px"><span style="font-weight: 800">جایزه؟</span> نقدی + تگ و منشن شدن</span>
 </div>
 </div>
 </div>
 </section>
 
 <!-- ═════════ DISTINCTION ═════════ -->
-<section style="max-width: 1240px; margin: 0 auto; padding: 80px 24px 120px; text-align: center">
+<section style="max-width: 1240px; margin: 0 auto; padding: 30px 24px 30px; text-align: center">
 <div class="mono sr" style="font-size: 11px; letter-spacing: 0.24em; color: #7a7a7a" dir="ltr">— THE ONLY RULE —</div>
 <div class="sr" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 30px">
 <span class="strike" style="font-size: clamp(18px, 2vw, 24px); color: #6a6a6a; border: 1.5px solid #2e2e2e; padding: 10px 26px; border-radius: 999px; font-weight: 600">ضبط کن</span>
 <span class="strike" style="font-size: clamp(18px, 2vw, 24px); color: #6a6a6a; border: 1.5px solid #2e2e2e; padding: 10px 26px; border-radius: 999px; font-weight: 600">تدوین کن</span>
 <span class="strike" style="font-size: clamp(18px, 2vw, 24px); color: #6a6a6a; border: 1.5px solid #2e2e2e; padding: 10px 26px; border-radius: 999px; font-weight: 600">جلوی دوربین برو</span>
 </div>
-<h2 class="sr shim" style="font-size: clamp(64px, 10vw, 156px); margin: 26px 0 0; line-height: 1.1; font-weight: 900">فقط پیدا کن.</h2>
+<h2 class="sr shim" style="font-size: clamp(46px, 7vw, 108px); margin: 26px 0 0; line-height: 1.1; font-weight: 900">فقط پیدا کن.</h2>
 <p class="sr" style="font-size: 18px; color: #a0a0a0; max-width: 600px; margin: 22px auto 0; line-height: 2; font-weight: 300">قرار نیست محتوا بسازی. تو که داری کلاس رو می‌بینی؛ کافیه چشمت به لحظه‌ها باشه. ساختنش کار ماست.</p>
 </section>
 
@@ -512,38 +518,38 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <section id="moments" style="padding: 40px 24px 120px">
 <div style="max-width: 1240px; margin: 0 auto">
 <div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #7a7a7a" dir="ltr">02 — WHAT TO HUNT</div>
-<h2 class="sr" style="font-size: clamp(42px, 5.4vw, 76px); margin: 14px 0 0; line-height: 1.12; font-weight: 900">چه لحظه‌ای ارزش شکار داره؟</h2>
+<h2 class="sr" style="font-size: clamp(30px, 3.8vw, 52px); margin: 14px 0 0; line-height: 1.12; font-weight: 900">چه لحظه‌ای ارزش شکار داره؟</h2>
 <p style="font-size: 17px; color: #a0a0a0; max-width: 560px; margin: 16px 0 0; line-height: 1.95; font-weight: 300">اگه وسط کلاس خندیدی، جا خوردی، یا با خودت گفتی «اینو باید همه ببینن» — همونه.</p>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; margin-top: 52px">
-<article class="card sr-pop" style="--rot: 0deg; padding: 28px 26px 32px; min-height: 270px; display: flex; flex-direction: column; gap: 14px">
+<article class="card sr-pop" style="--rot: 0deg; padding: 24px 24px 26px; min-height: 220px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; justify-content: space-between; align-items: center"><span class="ico"><span class="jump" style="display: inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 14s1.5 3 4 3 4-3 4-3"></path><path d="M9 9h.01M15 9h.01"></path></svg></span></span><span class="mono tag" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; border: 1px solid #3a3a3a; padding: 4px 10px; border-radius: 999px">TYPE 01</span></div>
-<h3 class="fun" style="font-size: 36px; margin: 6px 0 0; line-height: 1.2">خنده‌دار</h3>
+<h3 class="fun" style="font-size: 28px; margin: 6px 0 0; line-height: 1.2">خنده‌دار</h3>
 <p class="muted" style="margin: 0; font-size: 15px; line-height: 1.95; color: #a3a3a3">وقتی استاد وسط حل تست با جواب خودش دعوا می‌کنه و کل کلاس می‌ترکه.</p>
 </article>
-<article class="card sr-pop" style="padding: 28px 26px 32px; min-height: 270px; display: flex; flex-direction: column; gap: 14px">
+<article class="card sr-pop" style="padding: 24px 24px 26px; min-height: 220px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; justify-content: space-between; align-items: center"><span class="ico"><span class="up2" style="display: inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></span></span><span class="mono tag" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; border: 1px solid #3a3a3a; padding: 4px 10px; border-radius: 999px">TYPE 02</span></div>
-<h3 class="fun" style="font-size: 36px; margin: 6px 0 0; line-height: 1.2">انگیزشی</h3>
+<h3 class="fun" style="font-size: 28px; margin: 6px 0 0; line-height: 1.2">انگیزشی</h3>
 <p class="muted" style="margin: 0; font-size: 15px; line-height: 1.95; color: #a3a3a3">اون یه جمله‌ای که آخر جلسه گفت و تا نصفه‌شب تو سرت موند.</p>
 </article>
-<article class="card sr-pop" style="padding: 28px 26px 32px; min-height: 270px; display: flex; flex-direction: column; gap: 14px">
+<article class="card sr-pop" style="padding: 24px 24px 26px; min-height: 220px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; justify-content: space-between; align-items: center"><span class="ico"><span class="heart" style="display: inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.8 8 3.2 4 7 4c2.1 0 3.6 1.1 5 2.9C13.4 5.1 14.9 4 17 4c3.8 0 6.2 4 4.6 7.7C19.5 16.4 12 21 12 21z"></path></svg></span></span><span class="mono tag" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; border: 1px solid #3a3a3a; padding: 4px 10px; border-radius: 999px">TYPE 03</span></div>
-<h3 class="fun" style="font-size: 36px; margin: 6px 0 0; line-height: 1.2">احساسی</h3>
+<h3 class="fun" style="font-size: 28px; margin: 6px 0 0; line-height: 1.2">احساسی</h3>
 <p class="muted" style="margin: 0; font-size: 15px; line-height: 1.95; color: #a3a3a3">خاطره‌ای که استاد از شب کنکور خودش تعریف کرد و کلاس ساکت شد.</p>
 </article>
-<article class="card sr-pop" style="padding: 28px 26px 32px; min-height: 270px; display: flex; flex-direction: column; gap: 14px">
+<article class="card sr-pop" style="padding: 24px 24px 26px; min-height: 220px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; justify-content: space-between; align-items: center"><span class="ico"><span class="spin-fast" style="display: inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v6M12 16v6M2 12h6M16 12h6M5 5l4 4M15 15l4 4M19 5l-4 4M9 15l-4 4"></path></svg></span></span><span class="mono tag" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; border: 1px solid #3a3a3a; padding: 4px 10px; border-radius: 999px">TYPE 04</span></div>
-<h3 class="fun" style="font-size: 36px; margin: 6px 0 0; line-height: 1.2">غافلگیرکننده</h3>
+<h3 class="fun" style="font-size: 28px; margin: 6px 0 0; line-height: 1.2">غافلگیرکننده</h3>
 <p class="muted" style="margin: 0; font-size: 15px; line-height: 1.95; color: #a3a3a3">تستی که همه غلط زدن و با یه ترفند ده‌ثانیه‌ای حل شد.</p>
 </article>
-<article class="card sr-pop" style="padding: 28px 26px 32px; min-height: 270px; display: flex; flex-direction: column; gap: 14px">
+<article class="card sr-pop" style="padding: 24px 24px 26px; min-height: 220px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; justify-content: space-between; align-items: center"><span class="ico"><span style="display: inline-flex; align-items: center; gap: 1px; font-weight: 900; font-size: 26px">«<span class="curs" style="width: 2px; height: 22px; background-color: currentColor"></span>»</span></span><span class="mono tag" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; border: 1px solid #3a3a3a; padding: 4px 10px; border-radius: 999px">TYPE 05</span></div>
-<h3 class="fun" style="font-size: 36px; margin: 6px 0 0; line-height: 1.2">جمله‌ی طلایی</h3>
+<h3 class="fun" style="font-size: 28px; margin: 6px 0 0; line-height: 1.2">جمله‌ی طلایی</h3>
 <p class="muted" style="margin: 0; font-size: 15px; line-height: 1.95; color: #a3a3a3">یه نکته یا فرمول که با یه جمله برای همیشه تو ذهنت قفل شد.</p>
 </article>
-<article class="card sr-pop" style="padding: 28px 26px 32px; min-height: 270px; display: flex; flex-direction: column; gap: 14px; border-style: dashed; border-color: #4a4a4a">
+<article class="card sr-pop" style="padding: 24px 24px 26px; min-height: 220px; display: flex; flex-direction: column; gap: 14px; border-style: dashed; border-color: #4a4a4a">
 <div style="display: flex; justify-content: space-between; align-items: center"><span class="ico"><span class="jump" style="display: inline-flex; font-weight: 900; font-size: 28px">?</span></span><span class="mono tag" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; border: 1px solid #3a3a3a; padding: 4px 10px; border-radius: 999px">TYPE ??</span></div>
-<h3 class="fun" style="font-size: 36px; margin: 6px 0 0; line-height: 1.2">لحظه‌ی خودت</h3>
+<h3 class="fun" style="font-size: 28px; margin: 6px 0 0; line-height: 1.2">لحظه‌ی خودت</h3>
 <p class="muted" style="margin: 0; font-size: 15px; line-height: 1.95; color: #a3a3a3">تو هیچ دسته‌ای جا نمی‌شه ولی می‌دونی خوبه؟ بفرست. قانون نداره.</p>
 </article>
 </div>
@@ -557,7 +563,7 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; flex-wrap: wrap">
 <div>
 <div class="mono" style="display: inline-flex; gap: 8px; align-items: center; font-size: 11px; letter-spacing: 0.18em; color: #bbb; border: 1px solid #2c2c2c; padding: 7px 14px; border-radius: 999px" dir="ltr"><span class="rec"></span>WORKFLOW · RUNNING</div>
-<h2 class="sr" style="font-size: clamp(42px, 5.4vw, 76px); margin: 18px 0 0; line-height: 1.12; font-weight: 900">روند مسابقه: از کلاس تا ریلز</h2>
+<h2 class="sr" style="font-size: clamp(30px, 3.8vw, 52px); margin: 18px 0 0; line-height: 1.12; font-weight: 900">روند: از کلاس تا ریلز</h2>
 </div>
 <div style="display: flex; gap: 8px; flex-wrap: wrap">
 <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; padding: 8px 14px; border-radius: 999px; border: 1px solid #333"><span style="width: 10px; height: 10px; border-radius: 50%; border: 2px solid #fff"></span>کار تو</span>
@@ -576,27 +582,14 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <!-- ROW 1 : right → left -->
 <div class="frow">
 <!-- NODE 1 -->
+
+<!-- NODE 1 -->
 <article class="node n1">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
-<span style="width: 44px; height: 44px; border-radius: 14px; border: 2px solid #fff; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="3"></rect><path d="M10 9l4 2-4 2z"></path><path d="M8 21h8"></path></svg></span>
-<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 01 · INPUT</span>
-</div>
-<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">کلاس رو می‌بینی</h3>
-<p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">همون کلاس آنلاینی که هر روز می‌بینی. فقط حواست به لحظه‌ها باشه.</p>
-<div style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 14px">
-<div dir="ltr" style="height: 8px; border-radius: 8px; background-color: #2a2a2a; position: relative; overflow: hidden"><div class="minifill" style="position: absolute; left: 0; top: 0; bottom: 0; border-radius: 8px; background-color: #fff"></div></div>
-<div class="mono" dir="ltr" style="display: flex; justify-content: space-between; font-size: 10px; color: #777; margin-top: 8px"><span>PLAYING</span><span>01:10:00</span></div>
-</div>
-<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 7px; font-size: 12px; padding: 5px 12px; border-radius: 999px; border: 1px solid #333"><span style="width: 8px; height: 8px; border-radius: 50%; border: 2px solid #fff"></span>تو · در حال تماشا</span>
-</article>
-<div class="hconn" aria-hidden="true"><span class="pkt pktL"></span></div>
-<!-- NODE 2 -->
-<article class="node n2">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
 <span style="width: 44px; height: 44px; border-radius: 14px; border: 2px solid #fff; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 1v4M12 19v4M1 12h4M19 12h4"></path></svg></span>
-<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 02 · DETECT</span>
+<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 01 · DETECT</span>
 </div>
-<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">یه لحظه رو شکار می‌کنی</h3>
+<h3 style="font-size: 21px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">یه لحظه رو شکار می‌کنی</h3>
 <p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">خندیدی؟ جا خوردی؟ گفتی «اینو باید همه ببینن»؟ شکار شد.</p>
 <div style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 14px; display: flex; align-items: center; gap: 16px">
 <span style="position: relative; width: 40px; height: 40px; flex: 0 0 40px"><span class="ping" style="position: absolute; inset: 0; border-radius: 50%; border: 2px solid #fff"></span><span class="ping2" style="position: absolute; inset: 0; border-radius: 50%; border: 2px solid #fff"></span><span style="position: absolute; inset: 13px; border-radius: 50%; background-color: #fff"></span></span>
@@ -606,12 +599,12 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 </article>
 <div class="hconn" aria-hidden="true"><span class="pkt pktL" style="animation-delay: 0.7s"></span></div>
 <!-- NODE 3 -->
-<article class="node n3">
+<article class="node n2">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
 <span style="width: 44px; height: 44px; border-radius: 14px; border: 2px solid #fff; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg></span>
-<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 03 · SEND</span>
+<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 02 · SEND</span>
 </div>
-<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">تو تلگرام می‌فرستی</h3>
+<h3 style="font-size: 21px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">تو تلگرام می‌فرستی</h3>
 <p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">استاد + جلسه + زمان به <span class="mono" dir="ltr" style="font-size: 12px">@MansvolveSupport</span>. با ویدیو، امتیاز بیشتر.</p>
 <div style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 12px; display: flex; flex-wrap: wrap; gap: 6px">
 <span class="chip1" style="font-size: 12px; background-color: #fff; color: #000; padding: 5px 12px; border-radius: 999px; font-weight: 700">استاد [نام]</span>
@@ -626,30 +619,13 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 
 <!-- ROW 2 : left → right -->
 <div class="frow frow2">
-<!-- NODE 4 -->
-<article class="node n4">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
-<span style="width: 44px; height: 44px; border-radius: 14px; background-color: #fff; color: #000; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"></path></svg></span>
-<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 04 · PROCESS</span>
-</div>
-<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">ما پیداش می‌کنیم و می‌سازیم</h3>
-<p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">ضبط، تدوین، زیرنویس، موسیقی و ریتم — همه با تیم MANSVOLVE.</p>
-<div dir="ltr" style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 6px; position: relative; overflow: hidden">
-<div style="display: flex; gap: 4px"><span class="clipA" style="flex: 0 0 38%; height: 12px; border-radius: 6px; background-color: #fff"></span><span class="clipA" style="flex: 0 0 26%; height: 12px; border-radius: 6px; background-color: #6a6a6a"></span><span class="clipA" style="flex: 0 0 30%; height: 12px; border-radius: 6px; background-color: #fff"></span></div>
-<div style="display: flex; gap: 4px; padding-left: 18%"><span class="clipB" style="flex: 0 0 50%; height: 12px; border-radius: 6px; background-color: #8a8a8a"></span><span class="clipB" style="flex: 0 0 30%; height: 12px; border-radius: 6px; background-color: #4a4a4a"></span></div>
-<div style="display: flex; gap: 4px; padding-left: 6%"><span class="clipC" style="flex: 0 0 72%; height: 12px; border-radius: 6px; background-color: #3a3a3a"></span></div>
-<span class="cutline" style="position: absolute; top: 6px; bottom: 6px; width: 2px; background-color: #fff; border-radius: 2px"></span>
-</div>
-<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 7px; font-size: 12px; padding: 5px 12px; border-radius: 999px; background-color: #fff; color: #000; font-weight: 700"><span style="width: 8px; height: 8px; border-radius: 50%; background-color: #000"></span>MANSVOLVE · در حال تدوین</span>
-</article>
-<div class="hconn" aria-hidden="true"><span class="pkt pktR" style="animation-delay: 0.3s"></span></div>
 <!-- NODE 5 -->
-<article class="node n5">
+<article class="node n3">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
 <span style="width: 44px; height: 44px; border-radius: 14px; background-color: #fff; color: #000; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M11 9l3 2-3 2z"></path></svg></span>
-<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 05 · PUBLISH</span>
+<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 03 · PUBLISH</span>
 </div>
-<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">ریلز می‌شه</h3>
+<h3 style="font-size: 21px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">ریلز می‌شه</h3>
 <p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">تو پیج MANSVOLVE منتشر می‌شه و اسم تو به‌عنوان اسکات پاشه.</p>
 <div style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 12px; display: flex; align-items: center; gap: 14px">
 <div style="width: 44px; height: 78px; border-radius: 10px; border: 2px solid #fff; position: relative; flex: 0 0 44px; overflow: hidden"><img src="./assets/3ca1b5894036f21c07cacde0c905cfc4.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background-color: rgba(0,0,0,0.25)"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4l13 8-13 8z"></path></svg></span></div>
@@ -662,12 +638,12 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 </article>
 <div class="hconn" aria-hidden="true"><span class="pkt pktR" style="animation-delay: 1s"></span></div>
 <!-- NODE 6 -->
-<article class="node n6">
+<article class="node n4">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
 <span style="width: 44px; height: 44px; border-radius: 14px; border: 2px solid #fff; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"></path><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg></span>
-<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 06 · REWARD</span>
+<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 04 · REWARD</span>
 </div>
-<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">XP و جایزه‌ی نقدی</h3>
+<h3 style="font-size: 21px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">XP و جایزه‌ی نقدی</h3>
 <p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">امتیاز می‌گیری و می‌ری بالای جدول — سه نفر اول جایزه‌ی نقدی می‌برن.</p>
 <div style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 14px">
 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; margin-bottom: 8px"><span>شکارچی <span style="color: #888">← اسکات طلایی</span></span><span class="mono" dir="ltr" style="font-weight: 600">+100 XP</span></div>
@@ -686,8 +662,8 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <section id="about" style="max-width: 1240px; margin: 0 auto; padding: 0 24px 120px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
 <div style="flex: 1 1 460px; min-width: 0">
 <div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #7a7a7a" dir="ltr">03 — WHO WE ARE</div>
-<h2 class="sr" style="font-size: clamp(42px, 5.4vw, 76px); margin: 14px 0 0; line-height: 1.12; font-weight: 900">ما کی هستیم؟</h2>
-<p class="sr" style="font-size: 19px; line-height: 2; margin: 22px 0 0; color: #e6e6e6">ما <span style="font-weight: 900">تیم MANSVOLVE</span> هستیم؛ یه تیم کوچیک از کنکوری‌های سابق. همون‌هایی که یه روز جای تو پشت همین کلاس‌ها نشسته بودن.</p>
+<h2 class="sr" style="font-size: clamp(30px, 3.8vw, 52px); margin: 14px 0 0; line-height: 1.12; font-weight: 900">ما کی هستیم؟</h2>
+<p class="sr" style="font-size: 19px; line-height: 2; margin: 22px 0 0; color: #e6e6e6"> <span style="font-weight: 900"> MANSVOLVE </span>یک پلتفرم محتواییه که سعی می‌کنه بخش‌های جذاب، واقعی و کمتر دیده‌شده مسیر کنکور رو به محتوای کوتاه و قابل‌دیدن تبدیل کنه.</p>
 <p class="sr" style="font-size: 17px; line-height: 2; margin: 16px 0 0; color: #a3a3a3; font-weight: 300">کارمون اینه که از دل کلاس‌ها ویدیوهای کوتاه استادها رو پیدا کنیم — لحظه‌های خنده‌دار، انگیزشی، احساسی و… — تا دانش‌آموزها با <span style="color: #fff; font-weight: 600">روی دیگه‌ی استادها</span> آشنا بشن: شخصیت، رفتار و حرف‌هایی که پشت تخته معمولاً دیده نمی‌شه.</p>
 <div class="sr" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px">
 <span style="font-size: 14px; border: 1px solid #3a3a3a; padding: 7px 16px; border-radius: 999px">کنکوری‌های سابق</span>
@@ -698,9 +674,10 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 </div>
 <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
 <a class="igcard sr" href="https://www.instagram.com/mansvolve/" target="_blank" rel="noopener" aria-label="پیج MANSVOLVE در اینستاگرام" style="display: flex; align-items: center; gap: 18px; padding: 22px; border-radius: 32px; background-color: #0c0c0c; border: 1.5px solid #262626; text-decoration: none; color: #fff">
-<span style="position: relative; width: 84px; height: 84px; flex: 0 0 84px"><span class="igring spin" style="position: absolute; inset: 0; border-radius: 50%"></span><span style="position: absolute; inset: 4px; border-radius: 50%; background-color: #000"></span><img src="./assets/6f9609739317748208ca74968ff6af97.png" alt="" style="position: absolute; inset: 8px; width: 68px; height: 68px; border-radius: 50%; object-fit: cover"></span>
+<span style="position: relative; width: 84px; height: 84px; flex: 0 0 84px"><span style="position: absolute; inset: 0; border-radius: 50%; border: 2px solid #7c7777"></span><span style="position: absolute; inset: 4px; border-radius: 50%; background-color: #000"></span><img src="./assets/6f9609739317748208ca74968ff6af97.png" alt="" style="position: absolute; inset: 8px; width: 68px; height: 68px; border-radius: 50%; object-fit: cover"></span>
 <span style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px">
-<span class="mono" dir="ltr" style="font-size: 13px; color: #bdbdbd; text-align: right">@mansvolve</span>
+    <span class="mono" dir="ltr" style="font-size: 13px; color: #bdbdbd; text-align: right">@mansvolve</span>
+    <span class="mono" dir="ltr" style="font-size: 11px; color: #bdbdbd; text-align: left; position: relative;" >10.6k followers</span>
 <span style="font-size: 22px; font-weight: 900" dir="ltr">MANSVOLVE</span>
 <span style="font-size: 14px; color: #9a9a9a">ویدیوهای کوتاه از دل کلاس‌های کنکور</span>
 </span>
@@ -734,85 +711,48 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 </section>
 
 <!-- ═════════ VALUE EXCHANGE ═════════ -->
-<section style="max-width: 1240px; margin: 0 auto; padding: 0 24px 120px">
-<div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #7a7a7a" dir="ltr">04 — THE DEAL</div>
-<h2 class="sr" style="font-size: clamp(42px, 5.4vw, 76px); margin: 14px 0 0; line-height: 1.12; font-weight: 900">معامله‌ی خیلی ساده</h2>
-<p style="font-size: 17px; color: #a0a0a0; max-width: 560px; margin: 16px 0 0; line-height: 1.95; font-weight: 300">تو یه تایم‌استمپ می‌دی. ما یه ویدیو تحویل می‌دیم که همه ببینن.</p>
-
-<div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 52px; align-items: stretch">
-<div class="sr" style="flex: 1 1 380px; min-width: 0; border: 1.5px solid #2c2c2c; background-color: #0a0a0a; padding: 38px 34px; border-radius: 36px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
-<h3 style="font-size: 34px; margin: 0; font-weight: 900">سمت تو</h3>
-<span class="mono" dir="ltr" style="font-size: 11px; color: #bbb; border: 1px solid #333; padding: 5px 12px; border-radius: 999px">≈ 60 sec</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 28px">
-<div style="display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 20px; background-color: #141414; font-size: 17px"><span style="width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid #555; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: 0 0 32px">۱</span>یه تایم‌استمپ دقیق</div>
-<div style="display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 20px; background-color: #141414; font-size: 17px"><span style="width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid #555; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: 0 0 32px">۲</span>چند ثانیه وقت و حواس‌جمعی</div>
-<div style="display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 20px; background-color: #141414; font-size: 17px"><span style="width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid #555; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: 0 0 32px">۳</span>چیزی که فقط تو سر کلاس دیدی</div>
-<div style="display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 20px; border: 1.5px dashed #444; font-size: 17px"><span style="width: 32px; height: 32px; border-radius: 50%; background-color: #fff; color: #000; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 900; flex: 0 0 32px">+</span>اختیاری: ویدیوی کوتاه از همون لحظه<span style="font-size: 12px; background-color: #fff; color: #000; padding: 2px 10px; border-radius: 999px; margin-right: auto; font-weight: 800">۳× امتیاز</span></div>
-</div>
-</div>
-<div style="flex: 0 0 64px; display: flex; align-items: center; justify-content: center; min-height: 64px" aria-hidden="true">
-<div class="spin-fast" style="width: 60px; height: 60px; border-radius: 50%; border: 1.5px dashed #555; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16M15 3l5 5-5 5"></path><path d="M20 16H4M9 21l-5-5 5-5"></path></svg></div>
-</div>
-<div class="sr" style="flex: 1 1 380px; min-width: 0; background-color: #fff; color: #000; padding: 38px 34px; border-radius: 36px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
-<h3 style="font-size: 34px; margin: 0; font-weight: 900">سمت ما</h3>
-<span class="mono" dir="ltr" style="font-size: 11px; color: #fff; background-color: #000; padding: 5px 12px; border-radius: 999px">FULL PRODUCTION</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px; margin-top: 28px">
-<div style="display: flex; align-items: center; gap: 14px; padding: 11px 16px; border-radius: 18px; background-color: #f1f1f1; font-size: 16px"><span class="tick" style="width: 28px; height: 28px; border-radius: 50%; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; flex: 0 0 28px; animation-delay: 0.2s"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"></path></svg></span>تدوین و تولید کامل ویدیو</div>
-<div style="display: flex; align-items: center; gap: 14px; padding: 11px 16px; border-radius: 18px; background-color: #f1f1f1; font-size: 16px"><span class="tick" style="width: 28px; height: 28px; border-radius: 50%; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; flex: 0 0 28px; animation-delay: 0.4s"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"></path></svg></span>شانس دیده‌شدن تو پیج MANSVOLVE</div>
-<div style="display: flex; align-items: center; gap: 14px; padding: 11px 16px; border-radius: 18px; background-color: #f1f1f1; font-size: 16px"><span class="tick" style="width: 28px; height: 28px; border-radius: 50%; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; flex: 0 0 28px; animation-delay: 0.6s"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"></path></svg></span>اسمت پای ویدیو، به‌عنوان اسکات</div>
-<div style="display: flex; align-items: center; gap: 14px; padding: 11px 16px; border-radius: 18px; background-color: #f1f1f1; font-size: 16px"><span class="tick" style="width: 28px; height: 28px; border-radius: 50%; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; flex: 0 0 28px; animation-delay: 0.8s"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"></path></svg></span>XP و جایگاه تو جدول اسکات‌ها</div>
-<div style="display: flex; align-items: center; gap: 14px; padding: 11px 16px; border-radius: 18px; background-color: #f1f1f1; font-size: 16px"><span class="tick" style="width: 28px; height: 28px; border-radius: 50%; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; flex: 0 0 28px; animation-delay: 1s"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"></path></svg></span>جایزه‌ی نقدی برای ۳ نفر اول جدول<span style="font-size: 12px; color: #fff; background-color: #000; padding: 2px 10px; border-radius: 999px; margin-right: auto">تا ۵۰۰ هزار تومان</span></div>
-</div>
-</div>
-</div>
-</section>
-
 <!-- ═════════ POINTS ═════════ -->
 <section id="points" style="max-width: 1240px; margin: 0 auto; padding: 20px 24px 120px">
 <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; flex-wrap: wrap">
 <div>
-<div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #7a7a7a" dir="ltr">05 — POINT SYSTEM</div>
-<h2 class="sr" style="font-size: clamp(42px, 5.4vw, 76px); margin: 14px 0 0; line-height: 1.12; font-weight: 900">امتیازها چطوری جمع می‌شن؟</h2>
+<div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #7a7a7a" dir="ltr">04 — POINT SYSTEM</div>
+<h2 class="sr" style="font-size: clamp(30px, 3.8vw, 52px); margin: 14px 0 0; line-height: 1.12; font-weight: 900">امتیازها چطوری جمع می‌شن؟</h2>
 </div>
 <p style="font-size: 16px; color: #a0a0a0; max-width: 420px; margin: 0; line-height: 1.95; font-weight: 300">هر لحظه از ارسال تا ریلز شدن چند مرحله داره و تو هر مرحله XP می‌گیری. امتیازها روی هم جمع می‌شن.</p>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 48px">
 <div class="pcard sr" style="position: relative; background-color: #0c0c0c; border: 1.5px solid #262626; border-radius: 30px; padding: 28px 26px; display: flex; flex-direction: column; gap: 10px; min-height: 220px">
-<span class="mono" dir="ltr" style="font-size: 40px; font-weight: 600; line-height: 1; text-align: right">+10<span style="font-size: 14px; margin-left: 6px">XP</span></span>
+<span class="mono" dir="ltr" style="font-size: 32px; font-weight: 600; line-height: 1; text-align: right">+10<span style="font-size: 14px; margin-left: 6px">XP</span></span>
 <div style="font-size: 20px; font-weight: 900; margin-top: auto">ارسال تایم‌استمپ</div>
 <div style="font-size: 14px; line-height: 1.9; color: #a3a3a3">اسم استاد، درس و جلسه، و زمان دقیق لحظه رو تو تلگرام بفرست.</div>
 </div>
-<div class="pcard sr" style="position: relative; background-color: #fff; color: #000; border: 1.5px solid #fff; border-radius: 30px; padding: 28px 26px; display: flex; flex-direction: column; gap: 10px; min-height: 220px"><span style="position: absolute; top: 18px; left: 18px; font-size: 12px; font-weight: 800; background-color: #000; color: #fff; padding: 4px 12px; border-radius: 999px">۳ برابر</span>
-<span class="mono" dir="ltr" style="font-size: 40px; font-weight: 600; line-height: 1; text-align: right">+30<span style="font-size: 14px; margin-left: 6px">XP</span></span>
-<div style="font-size: 20px; font-weight: 900; margin-top: auto">ارسال با ویدیو</div>
-<div style="font-size: 14px; line-height: 1.9; color: #444">یه اسکرین‌رکورد کوتاه از همون لحظه هم بفرست. به‌جای ۱۰، سی امتیاز.</div>
-</div>
 <div class="pcard sr" style="position: relative; background-color: #0c0c0c; border: 1.5px solid #262626; border-radius: 30px; padding: 28px 26px; display: flex; flex-direction: column; gap: 10px; min-height: 220px">
-<span class="mono" dir="ltr" style="font-size: 40px; font-weight: 600; line-height: 1; text-align: right">+100<span style="font-size: 14px; margin-left: 6px">XP</span></span>
+<span class="mono" dir="ltr" style="font-size: 32px; font-weight: 600; line-height: 1; text-align: right">+30<span style="font-size: 14px; margin-left: 6px">XP</span></span>
 <div style="font-size: 20px; font-weight: 900; margin-top: auto">تأیید و ریلز شدن</div>
-<div style="font-size: 14px; line-height: 1.9; color: #a3a3a3">وقتی تیم لحظه‌ت رو تأیید کرد و تو پیج MANSVOLVE منتشر شد. بیشترین امتیاز همین‌جاست.</div>
+<div style="font-size: 14px; line-height: 1.9; color: #a3a3a3">وقتی تیم لحظه‌ت رو تأیید کرد و تو پیج MANSVOLVE منتشر شد.</div>
+</div>
+<div class="pcard sr" style="position: relative; background-color: #fff; color: #000; border: 1.5px solid #ffffff; border-radius: 30px; padding: 28px 26px; display: flex; flex-direction: column; gap: 10px; min-height: 220px">
+<span class="mono" dir="ltr" style="font-size: 32px; font-weight: 600; line-height: 1; text-align: right">+100<span style="font-size: 14px; margin-left: 6px">XP</span></span>
+<div style="font-size: 20px; font-weight: 900; margin-top: auto">بیشترین ویو هفته</div>
+<div style="font-size: 14px; line-height: 1.9; color: #444"> ویدیوت بیشترین ویو رو بین ویدیو های آپلود شده هفته رو بگیره. بیشترین امتیاز همین‌جاست.</div>
 </div>
 </div>
 
 <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 14px">
 <div class="sr" style="flex: 1 1 420px; min-width: 0; border-radius: 30px; border: 1.5px solid #262626; padding: 26px 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; justify-content: space-between">
 <div style="min-width: 0">
-<div style="font-size: 13px; color: #9a9a9a">مثال: یه لحظه با ویدیو که ریلز بشه</div>
+<div style="font-size: 15px; color: #b9b8b8">مثال: یه لحظه با ویدیو که ریلز بشه</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 10px; font-size: 15px">
-<span style="border: 1px solid #444; padding: 5px 12px; border-radius: 999px">ویدیو ۳۰</span><span style="color: #777">+</span>
-<span style="border: 1px solid #444; padding: 5px 12px; border-radius: 999px">تأیید و ریلز ۱۰۰</span><span style="color: #777">=</span>
+<span style="border: 1px solid #444; padding: 5px 12px; border-radius: 999px">ریلز شدن (30)</span><span style="color: #6d6c6c">+</span>
+<span style="border: 1px solid #444; padding: 5px 12px; border-radius: 999px">بیشترین ویو هفته (100)</span><span style="color: #6d6c6c">=</span>
 </div>
 </div>
-<div style="display: flex; align-items: baseline; gap: 8px"><span class="count" style="font-size: 64px; font-weight: 900; line-height: 1"></span><span class="mono" style="font-size: 14px">XP</span></div>
+<div style="display: flex; align-items: baseline; gap: 8px"><span class="count" style="font-size: 52px; font-weight: 900; line-height: 1"></span><span class="mono" style="font-size: 14px">XP</span></div>
 </div>
 <div class="sr" style="flex: 1 1 360px; min-width: 0; border-radius: 30px; background-color: #0c0c0c; border: 1.5px solid #262626; padding: 24px 28px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.9; color: #c4c4c4">
 <div style="font-weight: 800; color: #fff; font-size: 16px">قانون‌های ساده</div>
 <div style="display: flex; gap: 10px"><span style="width: 6px; height: 6px; border-radius: 50%; background-color: #fff; flex: 0 0 6px; margin-top: 11px"></span>اگه یه لحظه رو چند نفر بفرستن، امتیاز ریلز مال اولین نفره.</div>
-<div style="display: flex; gap: 10px"><span style="width: 6px; height: 6px; border-radius: 50%; background-color: #fff; flex: 0 0 6px; margin-top: 11px"></span>جدول اسکات‌ها هر هفته آپدیت می‌شه.</div>
+<div style="display: flex; gap: 10px"><span style="width: 6px; height: 6px; border-radius: 50%; background-color: #fff; flex: 0 0 6px; margin-top: 11px"></span>هر هفته آپدیت می‌شه.</div>
 <div style="display: flex; gap: 10px"><span style="width: 6px; height: 6px; border-radius: 50%; background-color: #fff; flex: 0 0 6px; margin-top: 11px"></span>ارسال‌ها فقط از تلگرام <span class="mono" dir="ltr" style="font-size: 13px">@MansvolveSupport</span> حساب می‌شن.</div>
 </div>
 </div>
@@ -836,30 +776,30 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <section id="board" style="max-width: 1240px; margin: 0 auto; padding: 20px 24px 120px">
 <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; flex-wrap: wrap">
 <div>
-<div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #7a7a7a" dir="ltr">06 — LEADERBOARD</div>
-<h2 class="sr" style="font-size: clamp(42px, 5.4vw, 76px); margin: 14px 0 0; line-height: 1.12; font-weight: 900">جدول اسکات‌ها</h2>
+<div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #7a7a7a" dir="ltr">05 — LEADERBOARD</div>
+<h2 class="sr" style="font-size: clamp(30px, 3.8vw, 52px); margin: 14px 0 0; line-height: 1.12; font-weight: 900">لیدربورد</h2>
 </div>
-<span style="font-size: 13px; color: #9a9a9a; border: 1px solid #333; padding: 8px 16px; border-radius: 999px">داده‌ی نمونه · فصل ۱ · آپدیت هفتگی</span>
+<span style="font-size: 13px; color: #9a9a9a; border: 1px solid #333; padding: 8px 16px; border-radius: 999px">داده‌ی نمونه · آپدیت هفتگی</span>
 </div>
 <div style="margin-top: 32px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 24px">
 <div style="flex: 1 1 220px"><div style="font-size: 18px; font-weight: 900">جایزه‌ی نقدی آخر فصل</div><div style="font-size: 13px; color: #9a9a9a; margin-top: 2px">برای سه نفر اول جدول</div></div>
 <div style="flex: 0 1 380px; width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; align-items: end">
 <div class="sr-pop" style="background-color: #0c0c0c; color: #fff; border: 1.5px solid #2e2e2e; border-radius: 20px; padding: 12px 10px; min-height: 112px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 2px; text-align: center">
-<span style="width: 26px; height: 26px; border-radius: 50%; background-color: #fff; color: #000; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px">۲</span>
+<span style="width: 26px; height: 26px; border-radius: 50%; background-color: #6d7776; color: #000; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px">۲</span>
 <span style="font-size: 12px; opacity: 0.75">نفر دوم</span>
-<span style="font-size: 24px; font-weight: 900; line-height: 1.15">۳۵۰</span>
+<span style="font-size: 21px; font-weight: 900; line-height: 1.15">۳۰۰</span>
 <span style="font-size: 11px; font-weight: 700">هزار تومان</span>
 </div>
 <div class="sr-pop" style="background-color: #fff; color: #000; border-radius: 20px; padding: 12px 10px; min-height: 138px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 2px; text-align: center">
-<span class="bob" style="display: inline-flex"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"></path><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg></span><span style="width: 26px; height: 26px; border-radius: 50%; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px">۱</span>
+<span class="bob" style="display: inline-flex"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"></path><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg></span><span style="width: 26px; height: 26px; border-radius: 50%; background-color: #eed811; color: #000000; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px">۱</span>
 <span style="font-size: 12px; opacity: 0.75">نفر اول</span>
-<span style="font-size: 30px; font-weight: 900; line-height: 1.15">۵۰۰</span>
+<span style="font-size: 26px; font-weight: 900; line-height: 1.15">۵۰۰</span>
 <span style="font-size: 11px; font-weight: 700">هزار تومان</span>
 </div>
 <div class="sr-pop" style="background-color: #0c0c0c; color: #fff; border: 1.5px solid #2e2e2e; border-radius: 20px; padding: 12px 10px; min-height: 100px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 2px; text-align: center">
-<span style="width: 26px; height: 26px; border-radius: 50%; background-color: #fff; color: #000; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px">۳</span>
+<span style="width: 26px; height: 26px; border-radius: 50%; background-color: #81663c; color: #000; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px">۳</span>
 <span style="font-size: 12px; opacity: 0.75">نفر سوم</span>
-<span style="font-size: 24px; font-weight: 900; line-height: 1.15">۱۵۰</span>
+<span style="font-size: 21px; font-weight: 900; line-height: 1.15">۲۰۰</span>
 <span style="font-size: 11px; font-weight: 700">هزار تومان</span>
 </div>
 </div>
@@ -868,49 +808,33 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <table class="lb">
 <caption style="caption-side: bottom; text-align: right; padding: 14px 18px; font-size: 12px; color: #7a7a7a; border-top: 1px solid #1d1d1d">XP = هر ارسال ۱۰ (با ویدیو ۳۰) + هر تأیید و ریلز ۱۰۰ · جایزه‌ی نقدی برای ۳ نفر اول جدول آخر فصل</caption>
 <thead>
-<tr><th class="c" scope="col">رتبه</th><th scope="col">اسکات</th><th scope="col">رشته</th><th class="c" scope="col">لحظه‌های ارسالی</th><th class="c" scope="col">با ویدیو</th><th class="c" scope="col">تأیید و ریلز</th><th class="c" scope="col">XP کل</th><th scope="col">سطح</th><th scope="col">جایزه</th></tr>
+<tr><th class="c" scope="col">رتبه</th><th scope="col">اسکات</th><th class="c" scope="col">XP کل</th><th scope="col">سطح</th><th scope="col">جایزه</th></tr>
 </thead>
 <tbody>
 <tr class="top1">
-<td class="c"><span style="width: 34px; height: 34px; border-radius: 50%; background-color: #000; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">۱</span></td>
+<td class="c"><span style="width: 34px; height: 34px; border-radius: 50%; background-color: #eed811; color: #000000; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">۱</span></td>
 <td><span style="display: inline-flex; align-items: center; gap: 12px"><span style="width: 38px; height: 38px; border-radius: 50%; background-color: #000; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">س</span><span style="font-weight: 800; font-size: 16px">سارا ک.</span></span></td>
-<td>تجربی</td>
-<td class="c">۲۴</td>
-<td class="c">۱۰</td>
-<td class="c">۶</td>
 <td class="c"><span class="mono" dir="ltr" style="font-weight: 600">1,040</span></td>
 <td><span style="font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background-color: #000; color: #fff">اسکات طلایی</span></td>
 <td><span style="font-weight: 800">۵۰۰ هزار تومان</span></td>
 </tr>
 <tr>
-<td class="c"><span style="width: 34px; height: 34px; border-radius: 50%; background-color: #fff; color: #000; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">۲</span></td>
+<td class="c"><span style="width: 34px; height: 34px; border-radius: 50%; background-color: #6d7776; color: #000; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">۲</span></td>
 <td><span style="display: inline-flex; align-items: center; gap: 12px"><span style="width: 38px; height: 38px; border-radius: 50%; background-color: #222; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">ا</span><span style="font-weight: 800; font-size: 16px">امیرعلی م.</span></span></td>
-<td>ریاضی</td>
-<td class="c">۲۰</td>
-<td class="c">۸</td>
-<td class="c">۵</td>
 <td class="c"><span class="mono" dir="ltr" style="font-weight: 600">860</span></td>
 <td><span style="font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background-color: #fff; color: #000">اسکات طلایی</span></td>
-<td><span style="font-weight: 800">۳۵۰ هزار تومان</span></td>
+<td><span style="font-weight: 800">۳۰۰ هزار تومان</span></td>
 </tr>
 <tr>
-<td class="c"><span style="width: 34px; height: 34px; border-radius: 50%; background-color: #fff; color: #000; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">۳</span></td>
+<td class="c"><span style="width: 34px; height: 34px; border-radius: 50%; background-color: #81663c; color: #000; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">۳</span></td>
 <td><span style="display: inline-flex; align-items: center; gap: 12px"><span style="width: 38px; height: 38px; border-radius: 50%; background-color: #222; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">ن</span><span style="font-weight: 800; font-size: 16px">نیایش ر.</span></span></td>
-<td>انسانی</td>
-<td class="c">۱۸</td>
-<td class="c">۴</td>
-<td class="c">۴</td>
 <td class="c"><span class="mono" dir="ltr" style="font-weight: 600">660</span></td>
 <td><span style="font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; border: 1px solid #444">شکارچی</span></td>
-<td><span style="font-weight: 800">۱۵۰ هزار تومان</span></td>
+<td><span style="font-weight: 800">۲۰۰ هزار تومان</span></td>
 </tr>
 <tr>
 <td class="c"><span style="width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #444; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">۴</span></td>
 <td><span style="display: inline-flex; align-items: center; gap: 12px"><span style="width: 38px; height: 38px; border-radius: 50%; background-color: #222; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">پ</span><span style="font-weight: 800; font-size: 16px">پارسا ه.</span></span></td>
-<td>تجربی</td>
-<td class="c">۱۵</td>
-<td class="c">۶</td>
-<td class="c">۳</td>
 <td class="c"><span class="mono" dir="ltr" style="font-weight: 600">570</span></td>
 <td><span style="font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; border: 1px solid #444">شکارچی</span></td>
 <td><span style="opacity: 0.4">—</span></td>
@@ -918,10 +842,6 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <tr>
 <td class="c"><span style="width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #444; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">۵</span></td>
 <td><span style="display: inline-flex; align-items: center; gap: 12px"><span style="width: 38px; height: 38px; border-radius: 50%; background-color: #222; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">ت</span><span style="font-weight: 800; font-size: 16px">ترانه ج.</span></span></td>
-<td>ریاضی</td>
-<td class="c">۱۲</td>
-<td class="c">۲</td>
-<td class="c">۲</td>
 <td class="c"><span class="mono" dir="ltr" style="font-weight: 600">360</span></td>
 <td><span style="font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; border: 1px solid #444">شکارچی</span></td>
 <td><span style="opacity: 0.4">—</span></td>
@@ -929,10 +849,6 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <tr>
 <td class="c"><span style="width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #444; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">۶</span></td>
 <td><span style="display: inline-flex; align-items: center; gap: 12px"><span style="width: 38px; height: 38px; border-radius: 50%; background-color: #222; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">م</span><span style="font-weight: 800; font-size: 16px">محمد ص.</span></span></td>
-<td>تجربی</td>
-<td class="c">۹</td>
-<td class="c">۱</td>
-<td class="c">۱</td>
 <td class="c"><span class="mono" dir="ltr" style="font-weight: 600">210</span></td>
 <td><span style="font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; border: 1px solid #444">ردیاب</span></td>
 <td><span style="opacity: 0.4">—</span></td>
@@ -940,10 +856,6 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <tr>
 <td class="c"><span style="width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #444; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">۷</span></td>
 <td><span style="display: inline-flex; align-items: center; gap: 12px"><span style="width: 38px; height: 38px; border-radius: 50%; background-color: #222; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 900">ی</span><span style="font-weight: 800; font-size: 16px">یاسمن ن.</span></span></td>
-<td>انسانی</td>
-<td class="c">۶</td>
-<td class="c">۰</td>
-<td class="c">۰</td>
 <td class="c"><span class="mono" dir="ltr" style="font-weight: 600">60</span></td>
 <td><span style="font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; border: 1px solid #444">تازه‌وارد</span></td>
 <td><span style="opacity: 0.4">—</span></td>
@@ -958,13 +870,13 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <div class="dotsb panel" style="max-width: 1320px; margin: 0 auto; background-color: #fff; color: #000; border-radius: 44px; padding: 88px 32px">
 <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
 <div style="flex: 1 1 440px; min-width: 0">
-<div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #555" dir="ltr">07 — SEND</div>
-<h2 class="sr" style="font-size: clamp(42px, 5.4vw, 76px); margin: 14px 0 0; line-height: 1.12; font-weight: 900">لحظه رو تو تلگرام بفرست</h2>
+<div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #555" dir="ltr">06 — SEND</div>
+<h2 class="sr" style="font-size: clamp(30px, 3.8vw, 52px); margin: 14px 0 0; line-height: 1.12; font-weight: 900">لحظه رو تو تلگرام بفرست</h2>
 <p style="font-size: 17px; color: #3f3f3f; max-width: 480px; margin: 16px 0 0; line-height: 1.95">فرم و ثبت‌نام نداریم. هر چیزی داری — تایم‌استمپ، ویدیو یا حتی یه سؤال — مستقیم بفرست برای پشتیبانی MANSVOLVE تو تلگرام.</p>
 <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 32px">
 <div class="sr" style="display: flex; gap: 14px; align-items: center; padding: 14px 18px; border-radius: 22px; background-color: #f1f1f1; font-size: 16px"><span style="width: 34px; height: 34px; border-radius: 50%; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; flex: 0 0 34px; font-weight: 900; font-size: 14px">۱</span><span>تو تلگرام به <span class="mono" dir="ltr" style="font-size: 14px; font-weight: 600">@MansvolveSupport</span> پیام بده</span></div>
 <div class="sr" style="display: flex; gap: 14px; align-items: center; padding: 14px 18px; border-radius: 22px; background-color: #f1f1f1; font-size: 16px"><span style="width: 34px; height: 34px; border-radius: 50%; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; flex: 0 0 34px; font-weight: 900; font-size: 14px">۲</span><span>اسم استاد، درس و جلسه، و زمان دقیق لحظه رو بنویس</span></div>
-<div class="sr" style="display: flex; gap: 14px; align-items: center; padding: 14px 18px; border-radius: 22px; background-color: #000; color: #fff; font-size: 16px"><span style="width: 34px; height: 34px; border-radius: 50%; background-color: #fff; color: #000; display: flex; align-items: center; justify-content: center; flex: 0 0 34px; font-weight: 900; font-size: 14px">۳</span><span>اگه تونستی، یه اسکرین‌رکورد کوتاه از همون لحظه هم بفرست — <span style="font-weight: 800">امتیازت ۳ برابر می‌شه</span></span></div>
+<div class="sr" style="display: flex; gap: 14px; align-items: center; padding: 14px 18px; border-radius: 22px; background-color: #000; color: #fff; font-size: 16px"><span style="width: 34px; height: 34px; border-radius: 50%; background-color: #fff; color: #000; display: flex; align-items: center; justify-content: center; flex: 0 0 34px; font-weight: 900; font-size: 14px">۳</span><span>اگه تونستی، یه اسکرین‌رکورد کوتاه از همون لحظه هم بفرست</span></div>
 </div>
 <a class="btn btn-dark" href="https://t.me/MansvolveSupport" target="_blank" rel="noopener" style="margin-top: 32px; min-height: 64px; padding: 0 34px; font-size: 18px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg>ارسال در تلگرام<span class="mono" dir="ltr" style="font-size: 12px; font-weight: 400; opacity: 0.7">@MansvolveSupport</span></a>
 </div>
@@ -989,7 +901,7 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <div style="font-size: 13px; padding: 8px 8px 4px">اسکرین‌رکورد همون لحظه</div>
 </div>
 <div class="bC" style="align-self: flex-end; max-width: 84%; background-color: #fff; color: #000; padding: 12px 16px; border-radius: 22px 22px 22px 6px; font-size: 14px; line-height: 1.9">دریافت شد، ممنون اسکات! تیم بررسیش می‌کنه.
-<div style="display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap"><span class="mono" dir="ltr" style="font-size: 11px; background-color: #000; color: #fff; padding: 3px 10px; border-radius: 999px; font-weight: 600">+30 XP</span><span style="font-size: 12px; border: 1px solid #000; padding: 1px 10px; border-radius: 999px">با ویدیو</span></div>
+<div style="display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap"><span class="mono" dir="ltr" style="font-size: 11px; background-color: #000; color: #fff; padding: 3px 10px; border-radius: 999px; font-weight: 600">+10 XP</span><span style="font-size: 12px; border: 1px solid #000; padding: 1px 10px; border-radius: 999px">با ویدیو</span></div>
 </div>
 </div>
 </div>
@@ -1001,12 +913,12 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <!-- ═════════ FAQ ═════════ -->
 <section id="faq" style="padding: 20px 24px 120px">
 <div style="max-width: 900px; margin: 0 auto">
-<div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #7a7a7a" dir="ltr">08 — FAQ</div>
-<h2 class="sr" style="font-size: clamp(38px, 4.8vw, 64px); margin: 14px 0 36px; line-height: 1.15; font-weight: 900">سؤال‌هایی که الان تو ذهنته</h2>
+<div class="mono" style="font-size: 11px; letter-spacing: 0.2em; color: #7a7a7a" dir="ltr">07 — FAQ</div>
+<h2 class="sr" style="font-size: clamp(28px, 3.4vw, 46px); margin: 14px 0 36px; line-height: 1.15; font-weight: 900">سؤال‌هایی که الان تو ذهنته</h2>
 <div style="display: flex; flex-direction: column; gap: 10px">
 <details class="faq sr">
 <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; font-size: 18px; font-weight: 700; min-height: 44px">لازمه ویدیو بفرستم؟<span class="pm" style="width: 38px; height: 38px; flex: 0 0 38px; border-radius: 50%; border: 1.5px solid #444; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 400">+</span></summary>
-<p style="margin: 0; padding: 0 24px 22px; color: #a3a3a3; font-size: 16px; line-height: 2">نه، تایم‌استمپ کافیه. ولی اگه یه اسکرین‌رکورد کوتاه از همون لحظه هم بفرستی، به‌جای ۱۰ امتیاز ۳۰ امتیاز می‌گیری و تیم هم سریع‌تر پیداش می‌کنه.</p>
+<p style="margin: 0; padding: 0 24px 22px; color: #a3a3a3; font-size: 16px; line-height: 2">فقط لحظه رو پیدا کن و Timestamp رو برای ما بفرست. انتخاب، ادیت، زیرنویس، کاور و انتشار با MANSVOLVE است.</p>
 </details>
 <details class="faq sr">
 <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; font-size: 18px; font-weight: 700; min-height: 44px">اگه لحظه‌ای که فرستادم انتخاب نشه چی؟<span class="pm" style="width: 38px; height: 38px; flex: 0 0 38px; border-radius: 50%; border: 1.5px solid #444; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 400">+</span></summary>
@@ -1014,15 +926,11 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 </details>
 <details class="faq sr">
 <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; font-size: 18px; font-weight: 700; min-height: 44px">اسمم کجا دیده می‌شه؟<span class="pm" style="width: 38px; height: 38px; flex: 0 0 38px; border-radius: 50%; border: 1.5px solid #444; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 400">+</span></summary>
-<p style="margin: 0; padding: 0 24px 22px; color: #a3a3a3; font-size: 16px; line-height: 2">تو کپشن ریلز، به‌عنوان اسکاتی که لحظه رو پیدا کرده، و توی جدول اسکات‌ها. اگه بخوای، می‌تونی با اسم مستعار شرکت کنی.</p>
-</details>
-<details class="faq sr">
-<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; font-size: 18px; font-weight: 700; min-height: 44px">از کدوم کلاس‌ها می‌شه لحظه فرستاد؟<span class="pm" style="width: 38px; height: 38px; flex: 0 0 38px; border-radius: 50%; border: 1.5px solid #444; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 400">+</span></summary>
-<p style="margin: 0; padding: 0 24px 22px; color: #a3a3a3; font-size: 16px; line-height: 2">کلاس‌های آنلاین کنکور در [فهرست پلتفرم‌ها / موسسه‌های همکار]. اگه مطمئن نیستی، بفرست؛ تیم بررسی می‌کنه.</p>
+<p style="margin: 0; padding: 0 24px 22px; color: #a3a3a3; font-size: 16px; line-height: 2">تو کپشن ریلز، به‌عنوان اسکاتی که لحظه رو پیدا کرده، و توی جدول اسکات‌ها. اگه بخوای، می‌تونی با اسم مستعار شرکت کنی و همچنین تگ استوری بشی.</p>
 </details>
 <details class="faq sr">
 <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; font-size: 18px; font-weight: 700; min-height: 44px">جایزه‌ها چیه؟<span class="pm" style="width: 38px; height: 38px; flex: 0 0 38px; border-radius: 50%; border: 1.5px solid #444; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 400">+</span></summary>
-<p style="margin: 0; padding: 0 24px 22px; color: #a3a3a3; font-size: 16px; line-height: 2">سه نفر اول جدول آخر فصل جایزه‌ی نقدی می‌گیرن: نفر اول ۵۰۰، نفر دوم ۳۵۰ و نفر سوم ۱۵۰ هزار تومان. اسمت هم پای هر ریلزی که پیدا کردی میاد.</p>
+<p style="margin: 0; padding: 0 24px 22px; color: #a3a3a3; font-size: 16px; line-height: 2">سه نفر اول جدول آخر فصل جایزه‌ی نقدی می‌گیرن: نفر اول ۵۰۰، نفر دوم ۳۰۰ و نفر سوم ۲۰۰ هزار تومان. اسمت هم پای هر ریلزی که پیدا کردی میاد.</p>
 </details>
 <details class="faq sr">
 <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; font-size: 18px; font-weight: 700; min-height: 44px">از کجا بفرستم؟ سؤال داشتم از کی بپرسم؟<span class="pm" style="width: 38px; height: 38px; flex: 0 0 38px; border-radius: 50%; border: 1.5px solid #444; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 400">+</span></summary>
@@ -1034,13 +942,13 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 
 <!-- ═════════ FINAL CTA ═════════ -->
 <section style="padding: 0 16px 16px">
-<div class="panel" style="position: relative; max-width: 1320px; margin: 0 auto; background-color: #fff; color: #000; border-radius: 44px; padding: 120px 24px; overflow: hidden">
+<div class="panel" style="position: relative; max-width: 1320px; margin: 0 auto; background-color: #fff; color: #000; border-radius: 44px; padding: 40px 24px; overflow: hidden">
 <div aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none">
 <div class="slide mono" dir="ltr" style="font-size: clamp(120px, 22vw, 330px); font-weight: 600; letter-spacing: -0.04em; color: transparent; -webkit-text-stroke: 1.5px #dcdcdc; white-space: nowrap; line-height: 1">SCOUT</div>
 </div>
 <div style="position: relative; max-width: 900px; margin: 0 auto; text-align: center">
 <div class="bob" style="display: inline-block"><img src="./assets/6f9609739317748208ca74968ff6af97.png" alt="" style="width: 96px; height: 96px; object-fit: cover; filter: invert(1); border-radius: 50%; border: 1.5px solid #000"></div>
-<h2 class="sr" style="font-size: clamp(40px, 5.8vw, 84px); margin: 24px 0 0; line-height: 1.18; font-weight: 900">لحظه‌ی بعدی، همین الان<br>داره تو یه کلاس اتفاق می‌افته.</h2>
+<h2 class="sr" style="font-size: clamp(30px, 4.2vw, 58px); margin: 24px 0 0; line-height: 1.18; font-weight: 900">لحظه‌ی بعدی، همین الان<br>داره تو یه کلاس اتفاق می‌افته.</h2>
 <p style="font-size: 18px; color: #444; margin: 20px auto 0; max-width: 520px; line-height: 1.95">چشمت به کلاس باشه، دستت روی تایم‌استمپ.</p>
 <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 38px">
 <a class="btn btn-dark" href="https://t.me/MansvolveSupport" target="_blank" rel="noopener">شروع شکار<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></a>
@@ -1053,8 +961,10 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <!-- ═════════ FOOTER ═════════ -->
 <footer style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 36px; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap">
 <div style="display: flex; align-items: center; gap: 12px">
-<img src="./assets/6f9609739317748208ca74968ff6af97.png" alt="" style="width: 36px; height: 36px; object-fit: cover; border-radius: 50%">
-<span class="mono" dir="ltr" style="font-size: 11px; letter-spacing: 0.18em; color: #8a8a8a">MANSVOLVE SCOUT · S01</span>
+  <a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; padding-right: 4px" aria-label="MANSVOLVE SCOUT — بالای صفحه">
+<img src="./assets/transparent.png" alt="لوگوی MANSVOLVE" style="width: 42px; height: 42px; object-fit: cover; border-radius: 50%; ">
+<span class="mono" style="font-size: 11px; letter-spacing: 0.18em" dir="ltr">MANSVOLVE<span style="color: #7d7d7d"></span></span>
+</a>
 </div>
 <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center">
 <a class="nl" href="https://www.instagram.com/mansvolve/reels/" target="_blank" rel="noopener" dir="ltr">@mansvolve</a>
