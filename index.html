@@ -102,9 +102,16 @@ html{scroll-behavior:smooth}
 .btn-dark:hover{background:#000;color:#fff}
 .btn-dark::before{background:linear-gradient(100deg,transparent,rgba(255,255,255,.25),transparent)}
 .btn-sm{min-height:44px;padding:0 20px;font-size:14px}
+.btn2{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:40px;padding:0 10px;border-radius:12px;background:#bababa;color:#000;border:1.5px solid #bababa;text-decoration:none;font-family:'Vazirmatn',sans-serif;font-weight:800;font-size:16px;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s cubic-bezier(.3,1.6,.5,1)}
+.btn2::before{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn2:hover::before{left:130%}
+.btn2:hover{transform:translateY(-3px) scale(1.03);color:#000}
+.btn2 svg{transition:transform .3s}
+.btn2:hover svg{transform:translateX(-6px)}
+
 .nl{color:#bdbdbd;text-decoration:none;font-size:14px;padding:10px 14px;border-radius:999px;transition:background .2s,color .2s}
 .nl:hover{color:#000;background:#fff}
-.nl2{color:#fff;text-decoration:none;font-size:14px;padding:10px 14px;border-radius:999px;transition:background .2s,color .2s}
+.nl2{color:#f5ed03;text-decoration:none;font-size:14px;padding:10px 14px;border-radius:999px;transition:background .2s,color .2s}
 .nl2:hover{color:#000;background:#fff}
 
 /* ---------- flow ---------- */
@@ -237,7 +244,7 @@ details[open].faq{border-color:#fff}
 
 /* ---------- compact mobile ---------- */
 @media (max-width: 1000px){ .looplbl{display:none} }
-@media (max-width: 640px){
+@media (max-width: 680px){
 .topnav{display:none!important}
 .mbar{display:flex!important}
 .hdr{overflow:visible!important;padding:6px 6px 6px 6px!important;flex-wrap:nowrap!important}
@@ -337,7 +344,7 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 .mrow:hover{background:#1a1a1a;color:#fff}
 .mrow .mi{font-family:'Martian Mono',monospace;font-size:11px;color:#6f6f6f;width:22px}
 .mrow svg{margin-right:auto;color:#5a5a5a}
-@media (min-width: 641px){ .mpanel{display:none} }
+@media (min-width: 680px){ .mpanel{display:none} }
 @keyframes slide{from{transform:translateX(-30%)}to{transform:translateX(30%)}}
 .slide{animation:slide 9s ease-in-out infinite alternate}
 </style>
@@ -359,16 +366,20 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <img src="./assets/transparent.png" alt="لوگوی MANSVOLVE" style="width: 42px; height: 42px; object-fit: cover; border-radius: 50%; ">
 <span class="mono" style="font-size: 11px; letter-spacing: 0.18em" dir="ltr">MANSVOLVE<span style="color: #7d7d7d"></span></span>
 </a>
-<nav class="topnav" style="display: flex; gap: 4px; align-items: center; flex-wrap: wrap" aria-label="منوی اصلی">
-<a class="nl2" style="font-size: large; font-weight: bold;" href="#board" >لیدربورد</a>
-<a class="nl" href="#scout">اسکات کیه؟</a>
-<a class="nl" href="#flow">روند</a>
-<a class="nl" href="#about">ما کی هستیم</a>
-<a class="nl" href="#points">امتیازها</a>
-<a class="btn btn-sm" href="https://t.me/MansvolveSupport" target="_blank" rel="noopener">ارسال لحظه</a>
-</nav>
+<div class="topnav" style="display: flex; gap: 4px; align-items: center; flex-wrap: wrap; justify-content: space-between; " aria-label="منوی اصلی">
+
+  <div style=" gap: 2px; align-items: center; float: none;position: absolute; left: 50%; transform: translate(-50%);">
+    <a class="btn2 btn-sm" style="font-size: medium; font-weight: bold;" href="#board">لیدربورد</a>
+    <a class="nl" href="#flow">روند</a>
+    <a class="nl" href="#about">ما کی هستیم</a>
+    <a class="nl" href="#points">امتیازها</a>
+  </div>
+
+  <a class="btn btn-sm" href="https://t.me/MansvolveSupport" target="_blank" rel="noopener"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg>ارسال لحظه</a>
+
+</div>
 <div class="mbar">
-<a class="mcta" href="https://t.me/MansvolveSupport" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg>ارسال</a>
+<a class="btn2 btn-sm2" href="#board" style="font-size: medium; font-weight: bold;">لیدربورد</a>
 <button type="button" class="{{hambCls}}" aria-label="منو" aria-expanded="{{menuExpanded}}" aria-controls="mobile-menu" onClick="{{toggleMenu}}"><span class="l1"></span><span class="l2"></span></button>
 </div>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
@@ -377,12 +388,9 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.2em; color: #8a8a8a">MENU</span>
 <span style="font-size: 12px; color: #8a8a8a; display: inline-flex; align-items: center; gap: 8px"><span class="rec"></span>شکار لحظه ·</span>
 </div>
-<a class="mrow" href="#scout" onClick="{{closeMenu}}" style="animation-delay: 0.05s"><span class="mi">01</span>اسکات کیه؟<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
-<a class="mrow" href="#flow" onClick="{{closeMenu}}" style="animation-delay: 0.10s"><span class="mi">02</span>روند مسابقه<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+<a class="mrow" href="#flow" onClick="{{closeMenu}}" style="animation-delay: 0.10s"><span class="mi">02</span>روند<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
 <a class="mrow" href="#about" onClick="{{closeMenu}}" style="animation-delay: 0.15s"><span class="mi">03</span>ما کی هستیم<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
 <a class="mrow" href="#points" onClick="{{closeMenu}}" style="animation-delay: 0.20s"><span class="mi">04</span>امتیازها<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
-<a class="mrow" href="#board" onClick="{{closeMenu}}" style="animation-delay: 0.25s"><span class="mi">05</span>جدول و جایزه‌ها<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
-<a class="mrow" href="#faq" onClick="{{closeMenu}}" style="animation-delay: 0.30s"><span class="mi">06</span>سؤال‌ها<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
 <div style="display: flex; gap: 8px; margin-top: 8px">
 <a class="btn" href="https://t.me/MansvolveSupport" target="_blank" rel="noopener" onClick="{{closeMenu}}" style="flex: 1 1 auto; min-height: 52px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg>ارسال لحظه در تلگرام</a>
 <a href="https://www.instagram.com/mansvolve/" target="_blank" rel="noopener" aria-label="اینستاگرام MANSVOLVE" onClick="{{closeMenu}}" style="flex: 0 0 52px; height: 52px; border-radius: 50%; border: 1.5px solid #3a3a3a; display: flex; align-items: center; justify-content: center; color: #fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg></a>
@@ -563,7 +571,7 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; flex-wrap: wrap">
 <div>
 <div class="mono" style="display: inline-flex; gap: 8px; align-items: center; font-size: 11px; letter-spacing: 0.18em; color: #bbb; border: 1px solid #2c2c2c; padding: 7px 14px; border-radius: 999px" dir="ltr"><span class="rec"></span>WORKFLOW · RUNNING</div>
-<h2 class="sr" style="font-size: clamp(30px, 3.8vw, 52px); margin: 18px 0 0; line-height: 1.12; font-weight: 900">روند: از کلاس تا ریلز</h2>
+<h2 class="sr" style="font-size: clamp(42px, 5.4vw, 76px); margin: 18px 0 0; line-height: 1.12; font-weight: 900">روند مسابقه: از کلاس تا ریلز</h2>
 </div>
 <div style="display: flex; gap: 8px; flex-wrap: wrap">
 <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; padding: 8px 14px; border-radius: 999px; border: 1px solid #333"><span style="width: 10px; height: 10px; border-radius: 50%; border: 2px solid #fff"></span>کار تو</span>
@@ -582,14 +590,27 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 <!-- ROW 1 : right → left -->
 <div class="frow">
 <!-- NODE 1 -->
-
-<!-- NODE 1 -->
 <article class="node n1">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
-<span style="width: 44px; height: 44px; border-radius: 14px; border: 2px solid #fff; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 1v4M12 19v4M1 12h4M19 12h4"></path></svg></span>
-<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 01 · DETECT</span>
+<span style="width: 44px; height: 44px; border-radius: 14px; border: 2px solid #fff; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="3"></rect><path d="M10 9l4 2-4 2z"></path><path d="M8 21h8"></path></svg></span>
+<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 01 · INPUT</span>
 </div>
-<h3 style="font-size: 21px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">یه لحظه رو شکار می‌کنی</h3>
+<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">کلاس رو می‌بینی</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">همون کلاس آنلاینی که هر روز می‌بینی. فقط حواست به لحظه‌ها باشه.</p>
+<div style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 14px">
+<div dir="ltr" style="height: 8px; border-radius: 8px; background-color: #2a2a2a; position: relative; overflow: hidden"><div class="minifill" style="position: absolute; left: 0; top: 0; bottom: 0; border-radius: 8px; background-color: #fff"></div></div>
+<div class="mono" dir="ltr" style="display: flex; justify-content: space-between; font-size: 10px; color: #777; margin-top: 8px"><span>PLAYING</span><span>01:10:00</span></div>
+</div>
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 7px; font-size: 12px; padding: 5px 12px; border-radius: 999px; border: 1px solid #333"><span style="width: 8px; height: 8px; border-radius: 50%; border: 2px solid #fff"></span>تو · در حال تماشا</span>
+</article>
+<div class="hconn" aria-hidden="true"><span class="pkt pktL"></span></div>
+<!-- NODE 2 -->
+<article class="node n2">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
+<span style="width: 44px; height: 44px; border-radius: 14px; border: 2px solid #fff; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 1v4M12 19v4M1 12h4M19 12h4"></path></svg></span>
+<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 02 · DETECT</span>
+</div>
+<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">یه لحظه رو شکار می‌کنی</h3>
 <p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">خندیدی؟ جا خوردی؟ گفتی «اینو باید همه ببینن»؟ شکار شد.</p>
 <div style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 14px; display: flex; align-items: center; gap: 16px">
 <span style="position: relative; width: 40px; height: 40px; flex: 0 0 40px"><span class="ping" style="position: absolute; inset: 0; border-radius: 50%; border: 2px solid #fff"></span><span class="ping2" style="position: absolute; inset: 0; border-radius: 50%; border: 2px solid #fff"></span><span style="position: absolute; inset: 13px; border-radius: 50%; background-color: #fff"></span></span>
@@ -599,12 +620,12 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 </article>
 <div class="hconn" aria-hidden="true"><span class="pkt pktL" style="animation-delay: 0.7s"></span></div>
 <!-- NODE 3 -->
-<article class="node n2">
+<article class="node n3">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
 <span style="width: 44px; height: 44px; border-radius: 14px; border: 2px solid #fff; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg></span>
-<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 02 · SEND</span>
+<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 03 · SEND</span>
 </div>
-<h3 style="font-size: 21px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">تو تلگرام می‌فرستی</h3>
+<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">تو تلگرام می‌فرستی</h3>
 <p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">استاد + جلسه + زمان به <span class="mono" dir="ltr" style="font-size: 12px">@MansvolveSupport</span>. با ویدیو، امتیاز بیشتر.</p>
 <div style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 12px; display: flex; flex-wrap: wrap; gap: 6px">
 <span class="chip1" style="font-size: 12px; background-color: #fff; color: #000; padding: 5px 12px; border-radius: 999px; font-weight: 700">استاد [نام]</span>
@@ -619,13 +640,30 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 
 <!-- ROW 2 : left → right -->
 <div class="frow frow2">
+<!-- NODE 4 -->
+<article class="node n4">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
+<span style="width: 44px; height: 44px; border-radius: 14px; background-color: #fff; color: #000; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"></path></svg></span>
+<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 04 · PROCESS</span>
+</div>
+<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">ما پیداش می‌کنیم و می‌سازیم</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">ضبط، تدوین، زیرنویس، موسیقی و ریتم — همه با تیم MANSVOLVE.</p>
+<div dir="ltr" style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 6px; position: relative; overflow: hidden">
+<div style="display: flex; gap: 4px"><span class="clipA" style="flex: 0 0 38%; height: 12px; border-radius: 6px; background-color: #fff"></span><span class="clipA" style="flex: 0 0 26%; height: 12px; border-radius: 6px; background-color: #6a6a6a"></span><span class="clipA" style="flex: 0 0 30%; height: 12px; border-radius: 6px; background-color: #fff"></span></div>
+<div style="display: flex; gap: 4px; padding-left: 18%"><span class="clipB" style="flex: 0 0 50%; height: 12px; border-radius: 6px; background-color: #8a8a8a"></span><span class="clipB" style="flex: 0 0 30%; height: 12px; border-radius: 6px; background-color: #4a4a4a"></span></div>
+<div style="display: flex; gap: 4px; padding-left: 6%"><span class="clipC" style="flex: 0 0 72%; height: 12px; border-radius: 6px; background-color: #3a3a3a"></span></div>
+<span class="cutline" style="position: absolute; top: 6px; bottom: 6px; width: 2px; background-color: #fff; border-radius: 2px"></span>
+</div>
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 7px; font-size: 12px; padding: 5px 12px; border-radius: 999px; background-color: #fff; color: #000; font-weight: 700"><span style="width: 8px; height: 8px; border-radius: 50%; background-color: #000"></span>MANSVOLVE · در حال تدوین</span>
+</article>
+<div class="hconn" aria-hidden="true"><span class="pkt pktR" style="animation-delay: 0.3s"></span></div>
 <!-- NODE 5 -->
-<article class="node n3">
+<article class="node n5">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
 <span style="width: 44px; height: 44px; border-radius: 14px; background-color: #fff; color: #000; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M11 9l3 2-3 2z"></path></svg></span>
-<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 03 · PUBLISH</span>
+<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 05 · PUBLISH</span>
 </div>
-<h3 style="font-size: 21px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">ریلز می‌شه</h3>
+<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">ریلز می‌شه</h3>
 <p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">تو پیج MANSVOLVE منتشر می‌شه و اسم تو به‌عنوان اسکات پاشه.</p>
 <div style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 12px; display: flex; align-items: center; gap: 14px">
 <div style="width: 44px; height: 78px; border-radius: 10px; border: 2px solid #fff; position: relative; flex: 0 0 44px; overflow: hidden"><img src="./assets/3ca1b5894036f21c07cacde0c905cfc4.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background-color: rgba(0,0,0,0.25)"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4l13 8-13 8z"></path></svg></span></div>
@@ -638,12 +676,12 @@ summary{padding:14px 16px!important;font-size:15.5px!important}
 </article>
 <div class="hconn" aria-hidden="true"><span class="pkt pktR" style="animation-delay: 1s"></span></div>
 <!-- NODE 6 -->
-<article class="node n4">
+<article class="node n6">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
 <span style="width: 44px; height: 44px; border-radius: 14px; border: 2px solid #fff; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"></path><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg></span>
-<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 04 · REWARD</span>
+<span class="mono" dir="ltr" style="font-size: 10px; letter-spacing: 0.14em; color: #888">NODE 06 · REWARD</span>
 </div>
-<h3 style="font-size: 21px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">XP و جایزه‌ی نقدی</h3>
+<h3 style="font-size: 25px; margin: 4px 0 0; line-height: 1.3; font-weight: 900">XP و جایزه‌ی نقدی</h3>
 <p style="margin: 0; font-size: 14px; line-height: 1.85; color: #a3a3a3">امتیاز می‌گیری و می‌ری بالای جدول — سه نفر اول جایزه‌ی نقدی می‌برن.</p>
 <div style="margin-top: auto; background-color: #151515; border-radius: 16px; padding: 14px">
 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; margin-bottom: 8px"><span>شکارچی <span style="color: #888">← اسکات طلایی</span></span><span class="mono" dir="ltr" style="font-weight: 600">+100 XP</span></div>
